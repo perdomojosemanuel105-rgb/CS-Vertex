@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Skins | Orange Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #ff8400; /* Naranja CS2 */
+            --dark-bg: #0a0a0a;       /* Negro profundo */
+            --card-bg: #141414;       /* Negro de las tarjetas */
+            --text-gray: #b3b3b3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            background-image: 
+                radial-gradient(circle at top right, rgba(255, 132, 0, 0.1), transparent),
+                radial-gradient(circle at bottom left, rgba(0, 0, 0, 1), transparent);
+            font-family: 'Rajdhani', sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Contenedor Principal */
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Menú Superior Estilo CS2 */
+        header {
+            border-bottom: 2px solid var(--primary-orange);
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        nav span {
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: 0.3s;
+        }
+
+        nav span:hover, nav span.active {
+            color: var(--primary-orange);
+            text-shadow: 0 0 10px rgba(255, 132, 0, 0.5);
+        }
+
+        /* Grid de Items */
+        .skin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjeta de Skin */
+        .skin-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            transition: 0.3s ease;
+            overflow: hidden;
+        }
+
+        .skin-card:hover {
+            border-color: var(--primary-orange);
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Etiqueta de Tipo */
+        .weapon-type {
+            font-size: 0.8rem;
+            color: var(--primary-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor de Imagen */
+        .image-container {
+            width: 100%;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            max-height: 90%;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.8));
+        }
+
+        /* Información y Botón */
+        .skin-info h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .skin-info p {
+            color: var(--text-gray);
+            margin: 5px 0 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .download-btn {
+            display: block;
+            background-color: var(--primary-orange);
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #ff9d33;
+            box-shadow: 0 0 20px rgba(255, 132, 0, 0.4);
+        }
+
+        /* Detalle decorativo lateral */
+        .skin-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, transparent 50%, var(--primary-orange) 50%);
+            opacity: 0.1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <nav>
+                <span class="active">Skins</span>
+                <span>Modelos</span>
+                <span>Mapas</span>
+                <span>Utilidad</span>
+            </nav>
+        </header>
+
+        <main class="skin-grid">
+            
+            <div class="skin-card">
+                <span class="weapon-type">Rifle de Asalto</span>
+                
+                <div class="image-container">
+                    <img src="img/galil.png" alt="Galil Custom Skin" onerror="this.src='https://via.placeholder.com/200x100/141414/ff8400?text=Galil+Preview'">
+                </div>
+
+                <div class="skin-info">
+                    <h3>Galil AR | Custom MDL</h3>
+                    <p>Colección Industrial - Skin de Prueba</p>
+                    
+                    <a href="https://www.mediafire.com/file/01wux4gtbw5ddhu/v_galil.mdl/file" 
+                       target="_blank" 
+                       class="download-btn">
+                        Descargar Skin
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
